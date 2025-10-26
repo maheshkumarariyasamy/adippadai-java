@@ -1,12 +1,14 @@
 package nall.ondru.arrays;
 
+import java.util.Arrays;
+
 public class ArrayUtils {
     // Array - Store multiple values in  single variable
 
     // Array Initialization - Type 1
 
-    int [] vowelsASCII = {65, 69, 73, 79, 85};
-    int [] tempASCII = new int[vowelsASCII.length];
+    int[] vowelsASCII = {65, 69, 73, 79, 85};
+    int[] tempASCII = new int[vowelsASCII.length];
     // temp[] size = vowels.length
 
     // Array Declaration - Type 2
@@ -31,27 +33,31 @@ public class ArrayUtils {
         System.out.print("]");
     }
 
-        void copyArrayTraditional()
-        {
-            for (int indexValue= 0; indexValue<vowelsASCII.length;indexValue++) {
-                tempASCII[indexValue] = vowelsASCII[indexValue];
-            }
-            System.out.println("\nTraversing TempArray (Traditional):");
-            traverse(tempASCII);
+    void copyArrayTraditional() {
+        for (int indexValue = 0; indexValue < vowelsASCII.length; indexValue++) {
+            tempASCII[indexValue] = vowelsASCII[indexValue];
         }
+        System.out.println("\nTraversing TempArray (Traditional):");
+        traverse(tempASCII);
+    }
 
-        void copyArrayModern()
-        {
-            System.arraycopy(vowelsASCII, 0, tempASCII, 0, vowelsASCII.length);
-            System.out.println("\nTraversing TempArray (Modern):");
-            traverse(tempASCII);
-        }
+    void copyArrayModern() {
+        System.arraycopy(vowelsASCII, 0, tempASCII, 0, vowelsASCII.length);
+        System.out.println("\nTraversing TempArray (Modern):");
+        traverse(tempASCII);
+    }
 
 
     public static void main(String[] args) {
         ArrayUtils array = new ArrayUtils();
-        array.traverse(array.serialNumbers);
         array.copyArrayTraditional();
         array.copyArrayModern();
+
+        System.out.println("\nBefore Sort:");
+        array.traverse(array.serialNumbers);
+        System.out.println("\nAfter Sort:");
+        Arrays.sort(array.serialNumbers);
+        array.traverse(array.serialNumbers);
+
     }
 }
