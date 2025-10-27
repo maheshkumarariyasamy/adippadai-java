@@ -120,12 +120,11 @@ public class ArrayUtils {
         System.out.println("Array length: " + array.serialNumbers.length);
         //length is a built-in java property
 
-//      List<int[]> serialKey = Arrays.asList(array.serialNumbers);
+        //List<int[]> serialKey = Arrays.asList(array.serialNumbers);
         Iterator<Integer> it = Arrays.stream(array.serialNumbers).iterator();
         System.out.print("[ ");
-        while (it.hasNext())
-        {
-            System.out.print(it.next()+" ");
+        while (it.hasNext()) {
+            System.out.print(it.next() + " ");
         }
         System.out.print("]");
     }
