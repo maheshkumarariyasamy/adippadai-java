@@ -1,8 +1,7 @@
-package nall.ondru.arrays;
+package naal.ondru;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 public class ArrayUtils {
     // Array - Store multiple values in  single variable
@@ -129,3 +128,4 @@ public class ArrayUtils {
         System.out.print("]");
     }
 }
+
